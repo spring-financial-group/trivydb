@@ -1,7 +1,7 @@
 name: Release
 jobs:
   release:
-    if: github.repository_owner == 'jenkins-x'
+    if: github.repository_owner == 'spring-financial-group'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -43,8 +43,8 @@ jobs:
         build-args: |
           VERSION=${{ steps.prep.outputs.version }}
         tags: |
-          ghcr.io/jenkins-x/trivydb:latest
-          ghcr.io/jenkins-x/trivydb:${{ steps.prep.outputs.version }}
+          ghcr.io/spring-financial-group/trivydb:latest
+          ghcr.io/spring-financial-group/trivydb:${{ steps.prep.outputs.version }}
 on:
   push:
     branches:
