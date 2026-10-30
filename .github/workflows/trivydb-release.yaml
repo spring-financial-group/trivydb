@@ -1,7 +1,7 @@
 name: Release
 jobs:
   release:
-    if: github.repository_owner == 'jenkins-x'
+    if: github.repository_owner == 'spring-financial-group'
     runs-on: ubuntu-latest
     permissions:
       contents: read
